@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-image: url("Untitled.jpeg");
+    background-size: cover;
+    opacity: 1;
+    overflow-y: hidden;
+}
+
+header {
+    background-color: #010101;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+nav ul li a.active, nav ul li a:hover {
+    background-color: #c95acd;
+    border-radius: 5px;
+}
+
+.icons {
+    display: flex;
+    gap: 10px;
+    color: white;
+}
+.home{
+    filter: invert(1);
+    border: 3px solid white;
+    
+}
+
+main {
+    max-width: 100vw;
+   height: 100vh;
+    border: 2px solid black;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: auto;
+   
+}
+.middle_container{
+    animation: slideFromleft 1s ease-in forwards;
+    max-width: 40%;
+    height: 60%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(156, 155, 155, 0.155);
+    border-radius: 18px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+@keyframes slideFromleft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%) ;
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.student-section {
+    text-align: center;
+}
+
+.student-section h2 {
+    color: #0d00ff;
+    margin-bottom: 20px;
+}
+
+.student-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.student-section label {
+    display: block;
+    font-weight: 1000;
+    color: #000000;
+}
+
+.student-section input {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+}
+
+.forgot-password {
+    align-self: center;
+    color: #ce0303;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: 400;
+}
+
+.forgot-password:hover {
+    
+    transform: scale(1.07);
+    transition: all 0.1s linear 0s;
+}
+
+.sign-in, .verify-face {
+    padding: 10px 20px;
+    color: white;
+    background-color: #2204ffd1;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: "Kanit", sans-serif;
+}
+
+.sign-in:hover, .verify-face:hover {
+    background-color: #2104ff;
+}
+
+.verify-face {
+    margin-top: 20px;
+}
+
+footer {
+    background-color: #000000;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
