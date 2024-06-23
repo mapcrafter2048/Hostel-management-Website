@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Student</a></li>
+                <li><a href="#" class="active">Administration</a></li>
+                <li><a href="#">About Us</a></li>
+
+
+            </ul>
+            <div class="buttons">
+                <div id="selected"><a href="#">Contact</a></div>
+                <div id="selected1">
+                    <p><a href="#">Feedback</a></p>
+                </div>
+            </div>
+            <div class="icons">
+                <a href="#"><i class="home"><img src="Home_light.svg" alt=""></i></a>
+                <a href="#"><i class="home"><img src="Bell_light.svg" alt=""></i></a>
+                <a href="#"><i class="home"><img src="User_alt_light.svg" alt=""></i></a>
+            </div>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="sidebar">
+            <img class="menu" src="menu.png" alt="" height="30">
+            <ul class="bold_char">
+                <li>
+                    <img src="image.png" height="25" alt="">
+                    <a href="#">DASHBOARD</a>
+
+                </li>
+                <li >
+                    <img src="team-management.png" height="25" alt="">
+                    <a href="#">MANAGE</a>
+                    
+                </li>
+                <li>
+                    <img src="notif.png" height="25" alt="">
+                    <a href="#">NOTFICATIONS</a>
+                </li>
+                <li class="selected">
+                    <img src="profile.png" height="25" alt="">
+                    <a href="#">PROFILE</a>
+                    <img src="selected.png" height="13" alt="">
+                </li>
+                <li>
+                    <img src="home.png" height="25" alt="">
+                    <a href="#">HOME</a>
+                </li>
+            </ul>
+        </section>
+        <section class="right-box">
+            <div class="right_container">
+                <header class="top_part">
+                    <h1 id="student">STUDENT PROFILE</h1>
+                </header>
+                <h1 class="name" id="name"><%= name %></h1>
+                <div class="personal_info">
+                    <div class="info">
+                        <h3>Personal Information:</h3>
+                        <ul>
+                            <div>
+                                <li>Roll Number:</li>
+                                <p class="p"><%= roll_number %></p>
+                            </div>
+                            <div>
+                                <li>Date of Birth:</li>
+                                <p class="p" id="dob"> <%= dob %></p>
+                            </div>
+                            <div>
+                                <li>Hostel:</li>
+                                <p class="p" id="hostel"><%= hostel %></p>
+                            </div>
+                            <div>
+                                <li>Address:</li>
+                                <p class="p"><%= address %></p>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="profile_pic" >
+                        <img src="profile.png" alt="" id="profilepic">
+                    </div>
+                </div>
+                <div class="academic_info">
+                    <h3>Academic Information:</h3>
+                    <ul>
+                        <div>
+                            <li>Programme: </li>
+                            <p class="p"> Bachelor of Technology</p>
+                        </div>
+                        <div>
+                            <li>Department: </li>
+                            <p class="p"> <%= branch %></p>
+                        </div>
+
+
+                    </ul>
+                    <h3>Contact Information:</h3>
+                    <ul>
+                        <div>
+                            <li>Phone No.: </li>
+                            <p class="p" id="mobile"><%= mobileno %></p>
+                        </div>
+                        <div>
+                            <li>Email: </li>
+                            <p class="p" id="email"><%= email %></p>
+                        </div>
+
+
+
+                    </ul>
+                </div>
+
+                <button class="edit-btn" onclick="toggleEdit()">Edit</button>
+                <form class="edit-form" id="edit-form">
+                    <label for="edit-profile-pic">Profile Picture:</label>
+                    <input type="file" id="edit-profile-pic" accept="image/*" onchange="loadFile(event)">
+                    <img id="output" width="150" style="display:none;">
+                    <input type="text" id="edit-name" placeholder="Name" value="ayaman">
+                    <input type="date" id="Date" placeholder="Title" value="Date of Birth">
+                    <input type="text" id="edit-email" placeholder="Email" value="ayamangmail.com">
+                    <input type="text" id="hostel" placeholder="Name" value="hostel">
+                    <input type="number" id="mobile_no" placeholder="mobile no." value="193474673">
+                    
+                    <div>
+                        <button type="button" class="save-btn" onclick="saveChanges()">Save</button>
+                    </div>
+                </form>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+    <script src="script1.js"></script>
+</body>
+
+</html>
