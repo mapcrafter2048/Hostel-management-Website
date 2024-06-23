@@ -1,3 +1,4 @@
+
 document.getElementById("form").addEventListener("submit", auth);
 
 function auth(event) {
@@ -17,3 +18,4 @@ function auth(event) {
         return;
     }
 }
+
