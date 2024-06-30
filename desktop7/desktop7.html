@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;  
+            box-sizing: border-box;         
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        body {
+            background-color: rgba(251, 246, 246, 0.51);
+            opacity: 1;
+            font-family: "Kanit", sans-serif;
+            font-style: normal;
+            
+        }
+        
+        header {
+            background-color: rgba(251, 246, 246, 0.579);
+            padding: 10px 0;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin-left: 100px;
+        }
+        
+        nav ul li {
+            margin-right: 20px;
+        }
+        
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+            font-size: 1.125rem;
+            font-weight: bold;
+            padding: 10px 20px;
+        }
+        
+        nav ul li a.active,
+        nav ul li a:hover {
+            color: #ff0000;
+            border-radius: 5px;
+        }
+        
+        .icons {
+            display: flex;
+            gap: 10px;
+            color: white;
+        }
+        
+        .buttons {
+            display: flex;
+            gap: 0.7rem;
+        }
+        
+        #selected {
+            list-style: none;
+            background-color: blue;
+            margin-left: 2px;
+            width: 100px;
+            height: 40px;
+            text-align: center;
+            padding-top: 12px;
+            display: flex;
+            justify-content: center;
+            
+            font-size: 0.9rem;
+            border-radius: 7px;
+        }
+        
+        #selected a {
+            color: white;
+            font-weight: 600;
+        }
+        
+        #selected:hover {
+            background-color: rgba(0, 0, 255, 0.888);
+        }
+        
+        #selected1 {
+            list-style: none;
+            background-color: black;
+            
+            
+            width: 100px;
+            height: 40px;
+            text-align: center;
+            padding-top: 12px;
+            display: flex;
+            justify-content: center;
+            
+            font-size: 0.9rem;
+            border-radius: 7px;
+        }
+        
+        #selected1:hover {
+            background-color: #333;
+        }
+        
+        #selected1 a {
+            color: rgb(255, 255, 255);
+            font-weight: 600;
+        }
+            
+        main {
+            display: flex;
+            margin-right: auto;
+        }
+        
+        .sidebar {
+            /* background-color: white; */
+            background-color: rgba(251, 246, 246, 0.579);
+            position: sticky;
+            top: 0;
+            height: 40vh;
+        }
+        
+        .menu {
+            margin-left: 20px;
+            cursor: pointer;
+        }
+        
+        .bold_char {
+            font-weight: bolder;
+            list-style: none;
+            margin-top: 2rem;
+            width: 13rem;
+        }
+        
+        .bold_char li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 10px 20px;
+            transition: all 0.3s;
+        }
+        
+        .bold_char li a {
+            color: black;
+            text-decoration: none;
+        }
+        
+        .bold_char li.selected,
+        .bold_char li:hover {
+            background-color: #728dee;
+        }
+        .form{
+            background-color: #ffffff9a;
+            display: flex;
+            box-shadow: 0px 0px 2px 2px rgba(210, 210, 210, 0.832);
+            width: 90%;
+            height: fit-content;
+            margin-left: auto;
+            margin-right: 7px;
+            flex-direction: column;
+            align-items: center;
+            background-color: wheat;
+        }
+        .form a{
+            align-self: stretch;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 9px;
+            width: 50vw;
+            gap: 15px;
+            /* padding: 20px; */
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            margin-bottom: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select {
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            width: 100%;
+        }
+
+        button {
+            align-self: center;
+            font-weight: bolder;
+            font-size: large;
+            font-family: "Poppins", sans-serif;
+            background-color: #FF0000;
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #cc0000;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Student</a></li>
+                <li><a href="#" class="active">Administration</a></li>
+                <li><a href="#">About Us</a></li>
+
+            </ul>
+            <div class="icons">
+                <a href="#"><i class="home"><img src="Home_light.svg" alt=""></i></a>
+                <a href="#"><i class="home"><img src="Bell_light.svg" alt=""></i></a>
+                <a href="#"><i class="home"><img src="User_alt_light.svg" alt=""></i></a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="sidebar">
+           <img class="menu" src="menu.png" alt="" height="30">
+            <ul class="bold_char">
+                <li>
+                    <img src="image.png" height="25" alt="">
+                    <a href="#">DASHBOARD</a>
+                    <img src="selected.png" height="13" alt="">
+                </li>
+                <li class="selected">
+                    <img src="manage.png" alt="" height="25">
+                    <a href="#">MANAGE</a>
+                </li>
+                <li>
+                    <img src="notif.png" height="25" alt="">
+                    <a href="#">NOTFICATIONS</a>
+                </li>
+                <li>
+                    <img src="profile.png" height="25" alt="">
+                    <a href="#">PROFILE</a>
+                </li>
+            </ul>
+        </section>
+        <section class="form">
+            <a href="#"><svg width="70" viewBox="0 0 171 89" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g style="mix-blend-mode:multiply">
+                    <path d="M78.375 63.0417L42.75 44.5M42.75 44.5L78.375 25.9584M42.75 44.5L128.25 44.5"
+                        stroke="#334155" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </g>
+            </svg>
+        </a>    
+            <br>
+            <div>
+            </div>
+            <form action="">
+                <div class="form-group">
+                    <label for="hostel">Select Hostel:</label>
+                    <select name="hostel" id="hostel">
+                        <option value=""></option>
+                        <option value="CVR">CV Raman</option>
+                        <option value="HJB">Homi Jehangir Bhabha</option>
+                        <option value="APJ">APJ Abdul Kalam</option>
+                        <option value="DA">Devi Ahilya</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" placeholder="Enter Name">
+                </div>
+                <div class="form-group">
+                    <label for="registration">Registration No.:</label>
+                    <input type="number" id="registration" placeholder="Enter Registration No.">
+                </div>
+                <div class="form-group">
+                    <label for="Programme">Programme:</label>
+                    <select name="Programme" id="Programme">
+                        <option value=""></option>
+                        <option value="BTech">Bachelor of Technology</option>
+                        <option value="MTech">Master of Technology</option>
+                        <option value="MS">Master of Science</option>
+                        <option value="PHD">PHD</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="Department">Department:</label>
+                    <select name="Department" id="Department">
+                        <option value=""></option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" placeholder="Enter Address">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="number" id="phone" placeholder="Enter Phone Number">
+                </div>
+                <div id="error-message" style="color: red;"></div>
+                <button type="submit">REGISTER</button>
+            </form>
+
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

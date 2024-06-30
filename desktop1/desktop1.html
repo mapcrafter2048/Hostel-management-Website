@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;  
+            box-sizing: border-box;         
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        body {
+            background-color: rgba(251, 246, 246, 0.51);
+            opacity: 1;
+            font-family: "Kanit", sans-serif;
+            font-style: normal;
+            
+        }
+        
+        header {
+            background-color: rgba(251, 246, 246, 0.579);
+            padding: 10px 0;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin-left: 100px;
+        }
+        
+        nav ul li {
+            margin-right: 20px;
+        }
+        
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+            font-size: 1.125rem;
+            font-weight: bold;
+            padding: 10px 20px;
+        }
+        
+        nav ul li a.active,
+        nav ul li a:hover {
+            color: #ff0000;
+            border-radius: 5px;
+        }
+        
+        .icons {
+            display: flex;
+            gap: 10px;
+            color: white;
+        }
+        
+        .buttons {
+            display: flex;
+            gap: 0.7rem;
+        }
+        
+        #selected {
+            list-style: none;
+            background-color: blue;
+            margin-left: 2px;
+            width: 100px;
+            height: 40px;
+            text-align: center;
+            padding-top: 12px;
+            display: flex;
+            justify-content: center;
+            
+            font-size: 0.9rem;
+            border-radius: 7px;
+        }
+        
+        #selected a {
+            color: white;
+            font-weight: 600;
+        }
+        
+        #selected:hover {
+            background-color: rgba(0, 0, 255, 0.888);
+        }
+        
+        #selected1 {
+            list-style: none;
+            background-color: black;
+            
+            
+            width: 100px;
+            height: 40px;
+            text-align: center;
+            padding-top: 12px;
+            display: flex;
+            justify-content: center;
+            
+            font-size: 0.9rem;
+            border-radius: 7px;
+        }
+        
+        #selected1:hover {
+            background-color: #333;
+        }
+        
+        #selected1 a {
+            color: rgb(255, 255, 255);
+            font-weight: 600;
+        }
+            
+        main {
+            display: flex;
+            margin-right: auto;
+        }
+        
+        .sidebar {
+            position: sticky;
+            top: 0;
+            height: 40vh;
+            background-color: rgba(251, 246, 246, 0.579);
+        }
+        
+        .menu {
+            margin-left: 20px;
+            cursor: pointer;
+        }
+        
+        .bold_char {
+            font-weight: bolder;
+            list-style: none;
+            margin-top: 2rem;
+            width: 13rem;
+        }
+        
+        .bold_char li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 10px 20px;
+            transition: all 0.3s;
+        }
+        
+        .bold_char li a {
+            color: black;
+            text-decoration: none;
+        }
+        
+        .bold_char li.selected,
+        .bold_char li:hover {
+            background-color: #728dee;
+        }
+        
+        main section:nth-child(2) {
+            min-height: 80vh;
+        }
+        
+        .rest {
+            box-shadow: 0px 0px 2px 2px rgba(210, 210, 210, 0.832);
+            background-color: #ffffff9a;
+            width: 90%;
+            margin-left: auto;
+            margin-right: 4px;
+        }
+        
+        .box {
+            display: flex;
+            margin: auto;
+            justify-content: center;
+            gap: 3rem;
+            padding: 40px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: larger;
+            flex-wrap: wrap;
+        }
+        
+        .bbox {
+            box-sizing: content-box;
+            background-color: rgb(238, 236, 236);
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+            border-radius: 40px;
+            align-items: center;
+            text-align: left;
+            height: 16rem;
+            width: 16rem;
+            transition: all 0.3s;
+        }
+        
+        .smallfont {
+            font-size: smaller;
+            text-align: center;
+        }
+        
+        #controls {
+            display: flex;
+            margin: 10px;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        #controls select {
+            padding: 10px;
+            font-size: 16px;
+        }
+        
+        .month h2 {
+            text-align: center;
+        }
+        
+        #calendar {
+            gap: 8px;
+            max-width: 600px;
+            margin: 2% auto;
+            padding: 4px;
+        }
+        
+        h2 {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
+        .head {
+            color: rgb(0, 170, 255);
+            width: fit-content;
+            margin: auto;
+        }
+        
+        .weekdays {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            font-weight: bold;
+            font-size: large;
+            margin-bottom: 7px;
+            text-align: center;
+            width: 100%;
+        }
+        
+        .days {
+            display: grid;
+            margin-bottom: 10px;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            text-align: center;
+        }
+
+        .day {
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .color-legend {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 10px 0;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .legend-color {
+            width: 15px;
+            height: 15px;
+            border-radius: 3px;
+        }
+
+        .legend-color.present {
+            background-color: #00CC00;
+        }
+
+        .legend-color.absent {
+            background-color: #FF0000;
+        }
+
+        .legend-color.leave {
+            background-color: #da5c5c;
+        }
+
+        .legend-color.late {
+            background-color: #83eb81;
+        }
+
+        .legend-color.holiday {
+            background-color: #CCCCCC;
+        }
+
+        .day.color1 {
+            background-color: #00CC00;
+        }
+
+        /* Present */
+        .day.color2 {
+            background-color: #FF0000;
+        }
+
+        /* Absent */
+        .day.color3 {
+            background-color: #da5c5c;
+        }
+
+        /* Leave */
+        .day.color4 {
+            background-color: #83eb81;
+        }
+
+        /* Late */
+        .day.color5 {
+            background-color: #CCCCCC;
+        }
+
+        /* Holiday */
+
+        .empty {
+            visibility: hidden;
+        }
+
+
+        @media screen and (min-width: 1200px) {
+            .bbox {
+                height: 16rem;
+                width: 16rem;
+            }
+        }
+
+        /* Medium screens */
+        @media screen and (max-width: 1199px) and (min-width: 768px) {
+            .bbox {
+                height: 14rem;
+                width: 14rem;
+            }
+        }
+
+        /* Small screens */
+        @media screen and (max-width: 767px) and (min-width: 480px) {
+            .bbox {
+                height: 12rem;
+                width: 12rem;
+            }
+        }
+
+        @media screen and (max-width: 550px) {
+            /* .sidebar{
+        display: none;
+    } */
+
+        }
+
+        /* Extra small screens */
+        @media screen and (max-width: 479px) {
+            .bbox {
+                height: 10rem;
+                width: 10rem;
+            }
+            .box {
+                padding: 20px;
+            }
+
+            #calendar {
+                width: 80%;
+                margin: 0 10%;
+            }
+            .menu {
+                margin-left: 0px;
+        }
+        .weekdays{
+            font-size: medium;
+            gap: 5px;
+            width: 100%;
+        }
+        .days{
+            width: 100%;
+            gap: 7px;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#" class="active">Student</a></li>
+                <li><a href="#">Administration</a></li>
+                <li><a href="#">About Us</a></li>
+
+
+            </ul>
+            <div class="buttons">
+                <div id="selected"><a href="#">Contact</a></div>
+                <div id="selected1">
+                    <p><a href="#">Feedback</a></p>
+                </div>
+            </div>
+            <div class="icons">
+                <a href="#"><i class="home"><img src="Home_light.svg" alt=""></i></a>
+                <a href="#"><i class="home"><img src="Bell_light.svg" alt=""></i></a>
+                <a href="#"><i class="home"><img src="User_alt_light.svg" alt=""></i></a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="sidebar">
+            <img class="menu" src="menu.png" alt="" height="30">
+            <ul class="bold_char">
+                <li class="selected">
+                    <img src="image.png" height="25" alt="">
+                    <a href="#">DASHBOARD</a>
+                    <img src="selected.png" height="13" alt="">
+                </li>
+                <li>
+                    <img src="notif.png" height="25" alt="">
+                    <a href="#">NOTFICATIONS</a>
+                </li>
+                <li>
+                    <img src="profile.png" height="25" alt="">
+                    <a href="#">PROFILE</a>
+                </li>
+            </ul>
+        </section>
+        <section class="rest">
+            <div class="box">
+                <div class="bbox box1">
+                </div>
+                <div class="bbox box2">
+                </div>
+                <div class="bbox box3">
+                </div>
+            </div>
+            <div class="Attendance">
+                <h2 class="head">Attendance Record</h2>
+
+                <div id="controls">
+                    <select id="year-select"></select>
+                    <select id="month-select"></select>
+                </div>
+                <div class="color-legend">
+                    <div class="legend-item">
+                        <div class="legend-color present"></div>Present
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color absent"></div>Absent
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color leave"></div>Leave
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color late"></div>Late
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color holiday"></div>Holiday
+                    </div>
+                </div>
+                <div id="calendar"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
