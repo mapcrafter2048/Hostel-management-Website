@@ -1,0 +1,453 @@
+/* my code part */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar li {
+    padding: 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.navbar a.active {
+    color: red;
+}
+
+.feedback {
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+aside.sidebar {
+    position: fixed;
+    left: 0;
+    top: 50px;
+    width: 200px;
+    height: 100%;
+    background-color: #fff;
+    border-right: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.sidebar li.active {
+    background-color: #e0e0e0;
+    font-weight: bold;
+}
+
+main {
+    margin-left: 0px;
+    padding: 20px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-bar input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.search-bar button {
+    padding: 10px;
+    border: none;
+    background-color: #ddd;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.notifications {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.notification {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.notification:last-child {
+    border-bottom: none;
+}
+
+.notification-content {
+    margin-bottom: 10px;
+}
+
+.notification-content strong {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.notification-content p {
+    margin: 0;
+}
+
+.notification-time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+    color: #888;
+}
+
+.notification-time a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.notification.viewed {
+    background-color: #e0ffe0;
+    animation: fadeOut 2s forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.6;
+    }
+}
+
+/* ends here */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+    
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: rgba(251, 246, 246, 0.51);
+    opacity: 1;
+    
+
+}
+
+header {
+    background-color: rgba(251, 246, 246, 0.579);
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-left: 100px;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.125rem;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    color: #ff0000;
+    border-radius: 5px;
+}
+
+.icons {
+    display: flex;
+    gap: 10px;
+    color: white;
+}
+
+.buttons {
+    display: flex;
+    gap: 0.7rem;
+}
+
+#selected {
+    list-style: none;
+    background-color: blue;
+    margin-left: 2px;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    padding-top: 12px;
+    display: flex;
+    justify-content: center;
+
+    font-size: 0.9rem;
+    border-radius: 7px;
+}
+
+#selected a {
+    color: white;
+    font-weight: 600;
+}
+
+#selected:hover {
+    background-color: rgba(0, 0, 255, 0.888);
+}
+
+#selected1 {
+    list-style: none;
+    background-color: black;
+
+
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    padding-top: 12px;
+    display: flex;
+    justify-content: center;
+
+    font-size: 0.9rem;
+    border-radius: 7px;
+}
+
+#selected1:hover {
+    background-color: #333;
+}
+
+#selected1 a {
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+}
+
+
+
+.menu {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.bold_char {
+    font-weight: bolder;
+    list-style: none;
+    margin-top: 40px;
+    width: 20;
+}
+
+.bold_char li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    margin: 10px 20px;
+    transition: all 0.3s;
+}
+
+.bold_char li a {
+    color: black;
+    text-decoration: none;
+}
+
+.bold_char li.selected,
+.bold_char li:hover {
+    background-color: #728dee;
+}
+
+main section:first-child {
+    position: sticky;
+    background-color: rgba(251, 246, 246, 0.579);
+    min-height: 94vh;
+    position: sticky;
+}
+
+main {
+    display: flex;
+    margin-right: auto;
+}
+
+.right_container {
+    box-shadow: 0px 0px 2px 2px rgba(210, 210, 210, 0.832);
+    width: 1200px;
+
+    margin-left: 3rem;
+    margin-top: 2rem;
+    background-color: #ffffff9a;
+}
+
+#student {
+    margin-top: 7px;
+}
+
+.top_part {
+    text-align: center;
+    background-color: rgba(0, 0, 255, 0.884);
+    color: white;
+    font-size: 0.9rem;
+    height: 60px;
+}
+
+.personal_info {
+
+    display: flex;
+    justify-content: space-between;
+    padding: 14px;
+}
+
+h3 {
+    font-size: 1.4rem;
+    color: blue;
+    margin-left: 7px;
+
+}
+
+.name {
+    margin: 23px;
+    margin-bottom: 10px;
+    font-weight: bold;
+
+}
+
+.profile_pic img {
+
+    width: 150px;
+    height: 150px;
+    margin-right: 15px;
+
+    background-size: cover;
+
+}
+
+ul {
+    list-style: none;
+    font-size: 1.3rem;
+    margin-left: 18px;
+    margin-top: 10px;
+
+
+
+}
+
+ul li {
+    font-weight: 570;
+    margin-bottom: 3px;
+}
+
+.academic_info {
+
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+}
+
+.p {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+
+}
+
+.academic_info ul div {
+    display: flex;
+    gap: 1rem;
+}
+
+.personal_info ul div {
+    display: flex;
+    gap: 1rem;
+
+}
+
+.edit-form {
+    display: none;
+    text-align: center;
+}
+
+.edit-form input,
+.edit-form textarea {
+    font-size: 0.9rem;
+    width: 50%;
+    height: 20px;
+    margin: 10px 0;
+    padding: 17px;
+}
+
+.edit-btn {
+    width: 100px;
+    height: 50px;
+
+    margin-left: 45%;
+    font-size: 1.4rem;
+    background-color: rgba(52, 52, 234, 0.745);
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 4px;
+}
+
+.save-btn {
+    width: 80px;
+    height: 40px;
+
+
+    font-size: 1.1rem;
+    background-color: rgba(0, 0, 0, 0.745);
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 4px;
+}
