@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: rgba(251, 246, 246, 0.51);
+    opacity: 1;
+
+
+}
+
+header {
+    background-color: rgba(251, 246, 246, 0.579);
+    padding: 10px 0;
+    font-family: "Ubuntu", sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-left: 100px;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.125rem;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    color: #ff0000;
+    border-radius: 5px;
+}
+
+.icons {
+    display: flex;
+    gap: 10px;
+    color: white;
+}
+
+.buttons {
+    display: flex;
+    gap: 0.7rem;
+}
+
+#selected {
+    list-style: none;
+    background-color: blue;
+    margin-left: 2px;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    padding-top: 12px;
+    display: flex;
+    justify-content: center;
+
+    font-size: 0.9rem;
+    border-radius: 7px;
+}
+
+#selected a {
+    color: white;
+    font-weight: 600;
+}
+
+#selected:hover {
+    background-color: rgba(0, 0, 255, 0.888);
+}
+
+#selected1 {
+    list-style: none;
+    background-color: black;
+
+
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    padding-top: 12px;
+    display: flex;
+    justify-content: center;
+
+    font-size: 0.9rem;
+    border-radius: 7px;
+}
+
+#selected1:hover {
+    background-color: #333;
+}
+
+#selected1 a {
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+}
+
+
+
+.menu {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.bold_char {
+    font-weight: 700;
+    list-style: none;
+    margin-top: 40px;
+    width: 20;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.bold_char li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    margin: 10px 20px;
+    transition: all 0.3s;
+}
+
+.bold_char li a {
+    color: black;
+    text-decoration: none;
+}
+
+.bold_char li.selected,
+.bold_char li:hover {
+    background-color: #728dee;
+}
+
+main section:first-child {
+    position: sticky;
+    background-color: rgba(251, 246, 246, 0.579);
+    min-height: 94vh;
+    position: sticky;
+}
+
+main {
+    display: flex;
+    margin-right: auto;
+}
+
+.right-part {
+    width: 100%;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-family: "Kanit", sans-serif;
+    font-weight: 200;
+}
+
+.container {
+    width: 100%;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header input[type="text"] {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.header button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.broadcast {
+    background-color: #555;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.add-student {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.filter {
+    margin-bottom: 20px;
+}
+
+.filter button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.student-list {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    box-shadow: 0 0 2px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+   
+}
+
+.left_box {
+    
+    width: 60%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    padding: 1rem;
+}
+
+.image img {
+    width: 100px;
+    height: 100px;
+}
+.student_info{
+    width: 136px;
+    
+    
+}
+.student_info p{
+    font-weight: 300;
+}
+
+.attendence {
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+    
+    padding: 8px;
+    
+}
+
+.attendence p {
+    background-color: #D9D9D9;
+    border-radius: 4px;
+    padding: 3px;
+    font-weight: 300;
+}
+
+.right_box {
+    margin-right: 50px;
+    display: flex;
+    
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 7px;
+
+}
+.send_message{
+    background-color:#cd1c1c9f;
+    height: 30px;
+    padding: 5px;
+    border-radius: 6px;
+    
+}
+.hostel{
+   
+    margin: auto;
+}
+.hostel h2{
+    font-size: 1.0rem;
+}
+.send_message p a{
+    color:rgb(0, 0, 0);
+    margin-left: 3px;
+}
+footer {
+    background-color: #232323;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

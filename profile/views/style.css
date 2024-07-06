@@ -17,6 +17,7 @@ body {
     
 
 }
+/* styling nav section of the webpage  */
 
 header {
     background-color: rgba(251, 246, 246, 0.579);
@@ -116,7 +117,7 @@ nav ul li a:hover {
 }
 
 
-
+/* styling bottom section of the webpage  */
 .menu {
     margin-left: 20px;
     cursor: pointer;
